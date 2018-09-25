@@ -22,8 +22,8 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-        referenciafirebase = configuracaoFirebase.getFirebase();
-        referenciafirebase.child();
+        //referenciafirebase = configuracaoFirebase.getFirebase();
+        //referenciafirebase.child();
     }
     public void abrirCadastroUsuario(View view){
         Intent intent = new Intent(LoginActivity.this,CadastroActivity.class);
