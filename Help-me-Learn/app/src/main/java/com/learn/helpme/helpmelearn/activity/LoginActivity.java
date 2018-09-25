@@ -22,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-        //referenciafirebase = configuracaoFirebase.getFirebase();
+        referenciafirebase = configuracaoFirebase.getFirebase();
         //referenciafirebase.child();
     }
     public void abrirCadastroUsuario(View view){
