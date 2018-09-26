@@ -9,25 +9,6 @@
     tools:context=".activity.LoginActivity">
 
     <EditText
-        android:id="@+id/TelaLogin_Email_ID"
-        android:layout_width="250dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="#ffdfff"
-        android:ems="10"
-        android:hint="Digite seu E-mail"
-        android:inputType="textPersonName"
-        android:padding="7dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.458" />
-
-    <EditText
         android:id="@+id/TelaLogin_Senha_ID"
         android:layout_width="250dp"
         android:layout_height="45dp"
@@ -35,7 +16,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="#ffdfff"
+        android:background="#ffffff"
         android:ems="10"
         android:hint="Digite sua senha"
         android:inputType="textPassword"
@@ -92,4 +73,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023"
         app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/TelaLogin_Email_ID"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#ffffff"
+        android:ems="10"
+        android:hint="Digite seu e-mail"
+        android:inputType="textEmailAddress"
+        android:padding="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.459" />
 </android.support.constraint.ConstraintLayout>
