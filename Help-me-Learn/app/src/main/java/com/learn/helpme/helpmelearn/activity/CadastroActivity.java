@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 import com.learn.helpme.helpmelearn.R;
 import com.learn.helpme.helpmelearn.config.configuracaoFirebase;
@@ -73,16 +74,22 @@ public class CadastroActivity extends AppCompatActivity {
                     finish();
 
                 }else{
+
+                    String erroExcecao = "";
+
+                    try{
+                        throw task.getException();
+                    } catch (FirebaseAuthWeakPasswordException e) {
+                        erroExcecao = "Digite uma senha mais forte!";
+                    }
+
+
                     Toast.makeText(CadastroActivity.this,"Erro ao Cadastrar", Toast.LENGTH_LONG).show();
 
                 }
 
             }
         });
-
-
-
     }
-
 
 }
