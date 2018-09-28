@@ -3,6 +3,7 @@ package com.learn.helpme.helpmelearn.activity;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -16,20 +17,25 @@ public class bernardogay extends AppCompatActivity {
 
     private DatabaseReference databaseReferencia = FirebaseDatabase.getInstance().getReference();
     private DatabaseReference usuarioReferencia = databaseReferencia.child("Lista de Gays");
-
+    private TextView texto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bernardogay);
-/*
+
         Gays gay = new Gays();
-        gay.setNome("Bernardo");
+/*      gay.setNome("Bernardo");
         gay.setSobrenome("Vianna");
         gay.setSexo("Irineu");
         gay.setIdade(24);
         usuarioReferencia.child("001").setValue(gay);
-*/
 
+
+        texto = (TextView) findViewById(R.id.texto1_ID);
+
+        gay.getNome();
+        texto.setText(gay.getNome());
+        usuarioReferencia.child("001").getParent();
 
         usuarioReferencia.addValueEventListener(new ValueEventListener() {
             @Override
@@ -42,6 +48,6 @@ public class bernardogay extends AppCompatActivity {
 
             }
         });
-
+*/
     }
 }
