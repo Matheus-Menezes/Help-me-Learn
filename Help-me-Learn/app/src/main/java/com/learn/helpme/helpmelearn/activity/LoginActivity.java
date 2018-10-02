@@ -59,9 +59,7 @@ public class LoginActivity extends AppCompatActivity {
         if(autenticacao.getCurrentUser() != null){
             abrirTelaPrincipal();
         }
-
     }
-
 
     private void validarLogin(){
         autenticacao = configuracaoFirebase.getFirebaseAutenticacao();
@@ -72,11 +70,13 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-
                     abrirTelaPrincipal();
-                    Toast.makeText(LoginActivity.this,"Sucesso",Toast.LENGTH_LONG).show();
+                    //Toast.makeText(LoginActivity.this,"Sucesso",Toast.LENGTH_LONG).show();
                 }else{
-                    Toast.makeText(LoginActivity.this,"Falha",Toast.LENGTH_LONG).show();
+                    //try{
+                     //   throw task.getException();
+                  //  }catch ()
+                    //Toast.makeText(LoginActivity.this,"Falha",Toast.LENGTH_LONG).show();
                 }
             }
         });
