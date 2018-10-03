@@ -21,6 +21,8 @@
         android:hint="Digite sua senha"
         android:inputType="textPassword"
         android:padding="7dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +42,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.707" />
+        app:layout_constraintVertical_bias="0.707"
+        android:theme="@style/botaoPadrao"
+        />
 
     <TextView
         android:id="@+id/TextView"
@@ -87,6 +91,8 @@
         android:hint="Digite seu e-mail"
         android:inputType="textEmailAddress"
         android:padding="7dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"

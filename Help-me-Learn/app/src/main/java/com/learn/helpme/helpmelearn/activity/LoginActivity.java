@@ -42,15 +42,19 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 usuario = new Usuario();
-                usuario.setEmail( EmailLogar.getText().toString() );
-                usuario.setSenha( SenhaLogar.getText().toString() );
 
-                validarLogin();
+                usuario.setEmail(EmailLogar.getText().toString());
+                usuario.setSenha(SenhaLogar.getText().toString());
+                if(usuario.getEmail().isEmpty() || usuario.getSenha().isEmpty()){
+                    Toast.makeText(LoginActivity.this,"Preencha os campos",Toast.LENGTH_LONG).show();
+                }else{
+                   // Toast.makeText(LoginActivity.this,"Teste",Toast.LENGTH_LONG).show();
+                    validarLogin();
+                }
+
 
             }
         });
-
-
     }
 
 

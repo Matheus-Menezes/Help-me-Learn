@@ -56,7 +56,12 @@ public class CadastroActivity extends AppCompatActivity {
                 usuario.setEmail(email.getText().toString());
                 usuario.setSenha(senha.getText().toString());
 
-                cadastrarUsuario();
+                if(usuario.getNome().isEmpty() || usuario.getEmail().isEmpty() || usuario.getSenha().isEmpty()){
+                    Toast.makeText(CadastroActivity.this,"Preencha todos os campos! ", Toast.LENGTH_LONG).show();
+                }else{
+                    cadastrarUsuario();
+                }
+
             }
         });
     }

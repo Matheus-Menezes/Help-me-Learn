@@ -8,11 +8,22 @@
     <item android:title="@string/Configuracao"
     app:showAsAction="never"
     android:orderInCategory="100"
-    android:id="@+id/action_settings"/>
+    android:id="@+id/item_configuracoes"/>
 
     <item android:title="Sair"
         app:showAsAction="never"
         android:orderInCategory="200"
         android:id="@+id/item_sair"/>
 
+    <item android:title="adicionar"
+        app:showAsAction="always"
+        android:orderInCategory="300"
+        android:icon="@drawable/ic_add"
+        android:id="@+id/item_adicionar"/>
+
+    <item android:title="Pesquisar"
+        app:showAsAction="always"
+        android:orderInCategory="400"
+        android:icon="@drawable/ic_search"
+        android:id="@+id/item_pesquisar"/>
 </menu>

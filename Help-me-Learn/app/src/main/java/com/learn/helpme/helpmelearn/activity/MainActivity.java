@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -16,16 +17,15 @@ import com.learn.helpme.helpmelearn.config.configuracaoFirebase;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button botaodeslogar;
-    private DatabaseReference firebase;
     private Toolbar toolbar;
+    private FirebaseAuth usuarioAutenticacao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        firebase = configuracaoFirebase.getFirebase();
+        usuarioAutenticacao = configuracaoFirebase.getFirebaseAutenticacao();
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Help me learn");
@@ -39,5 +39,30 @@ public class MainActivity extends AppCompatActivity {
         inflater.inflate(R.menu.menu_main, menu);
 
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch ( item.getItemId()){
+            case R.id.item_sair:
+                deslogarUsuario();
+                return true;
+            case R.id.item_configuracoes:
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+
+        }
+    }
+
+    public void deslogarUsuario(){
+
+        usuarioAutenticacao.signOut();
+        Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+        startActivity(intent);
+        finish();
+
     }
 }
